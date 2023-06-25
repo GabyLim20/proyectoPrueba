@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigations"
+    app:startDestination="@id/mapsFragment">
+
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.pokemon.ui.maps.ui.main.MapsFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mapsFragment_to_gifFragment"
+            app:destination="@id/gifFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gifFragment"
+        android:name="com.example.pokemon.ui.maps.ui.gif.GifFragment"
+        android:label="fragment_gif"
+        tools:layout="@layout/fragment_gif" >
+        <action
+            android:id="@+id/action_gifFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.pokemon.ui.maps.ui.information.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
+</navigation>
